@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SaveEVS.Models.Technology>
+
+@{
+    ViewBag.Title = "ViewDetail";
+}
+
+<h2>View New Technology </h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VideoLink)
+        </th>
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VideoLink) <br/>
+            <a href="https://www.youtube.com/">Copy Link and Go to You Tube </a>
+        </td>
+       
+    </tr>
+}
+
+</table>

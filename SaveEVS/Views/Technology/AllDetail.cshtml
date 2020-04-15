@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SaveEVS.Models.Technology>
+
+@{
+    ViewBag.Title = "AllDetail";
+}
+
+<h2>All Detail of New Technology </h2>
+
+<p>
+    @Html.ActionLink("Add New ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VideoLink)
+        </th>
+        <th>Edit </th>
+        <th>Delete  </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VideoLink)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+<hr />
+<a href="@Url.Action("RightLogin","Admin")" style="font-size:1.5em;">Move to Dashboard </a>

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "RightLogin";
+}
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="~/images/adm.png" class="img-thumbnail" />
+
+    </div>
+
+    <div class="col-md-6">
+        <h1>Wel Come to the Admin Pannel  </h1>
+        <hr />
+        <a href="@Url.Action("AllDetail","Technology")" style="font-size:1.5em;">View Technology </a> <br />
+
+        <a href="@Url.Action("AllDetail","Suggestion")" style="font-size:1.5em;"> View Suggestion </a> <br />
+
+        <a href="@Url.Action("AllDetail","Feed")" style="font-size:1.5em;">View  Feed Back  </a> <br />
+
+        <hr />
+        <a href="@Url.Action("Admin_Login","Admin")" style="font-size:1.5em;"> Try Again </a>
+    </div>
+
+
+</div>
+
+

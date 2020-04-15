@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    
+
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+
+    <link rel="stylesheet" href="~/css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" media="all" /> <!-- Style-CSS -->
+    <link rel="stylesheet" href="~/css/fontawesome-all.css"> <!-- Font-Awesome-Icons-CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- //css files -->
+    <!--web font-->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header>
+        <nav class="mnu">
+            <div class="container">
+                <div class="logo" id="logo">
+                    <h1><a href="@Url.Action("Admin_Login","Admin")">Geothermal Energy</a></h1>
+                </div>
+                <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+                <input type="checkbox" id="drop">
+                <ul class="menu mt-1">
+                    <li class="mr-lg-4 mr-3 active"><a href="@Url.Action("Index","Home")">Home</a></li>
+                    <li class="mr-lg-4 mr-3"><a href="@Url.Action("History","Home")">History</a></li>
+                    <li class="mr-lg-4 mr-3"><a href="@Url.Action("About","Home")">About</a></li>
+                    <li class="mr-lg-4 mr-3"><a href="@Url.Action("ViewDetail","Suggestion")">Suggestion</a></li>
+                    <li class="mr-lg-4 mr-3"><a href="@Url.Action("ViewDetail","Technology")">Technology</a></li>
+
+                    <li class="mr-lg-4 mr-3"><a href="@Url.Action("Project","Home")">Project</a></li>
+
+
+                    <li class="mr-lg-4 mr-3"><a href="@Url.Action("FeedBack","Home")">FeedBack</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- banner -->
+    <div class="banner">
+        <div class="agile_banner_info">
+            <div class="row banner_agile_para">
+                <div class="col-lg-9 ban-text" style="font-size:2em;">
+                    <h2>Renewable Energy </h2>
+                </div>
+                <div class="col-lg-3 ban-buton" style="font-size:2em;">
+                    <a href="#services" data-toggle="modal" data-target="#exampleModalCenter" role="button"> Read More </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+
+
+    <section class="foot-1 py-5" id="contact">
+        <div class="container py-lg-5">
+            <div class="row foot-1-top">
+                <div class="col-lg-3 col-md-6 col-sm-6 foot-1_grid_left">
+                    <h4 class="mb-3">Follow Us</h4>
+                    <div class="foot-top pt-3">
+                        <ul>
+                            <li><a href="#"><span class="fa fa-facebook"></span> Follow us on Facebook</a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span> Follow us on Twitter</a></li>
+                            <li><a href="#"><span class="fa fa-google"></span>Follow us on Google</a></li>
+                            <li><a href="#"><span class="fa fa-linkedin"></span> Follow us on Linked-In  </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 foot-1_grid_middle">
+                    <h4 class="mb-3">Quick Links </h4>
+                    <div class="foot-top pt-3">
+                        <ul>
+                            <li><a href="Index.html">Home</a></li>
+                            <li><a href="History.html">History</a></li>
+                            <li><a href="About.html">About</a></li>
+                            <li><a href="Contact.html">Feed Back</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 foot-1_grid_right">
+                    <h4 class="mb-4">Get In Touch</h4>
+                    <div class="contact_grid_right mt-5 mx-auto text-left">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.3064670122712!2d0.06289181529833637!3d51.50759327963517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a89bd79632e9%3A0xd2a1ee734c6226d0!2sUniversity%20of%20East%20London!5e0!3m2!1sen!2sin!4v1585478840728!5m2!1sen!2sin" width="600" height="300" frameborder="0" style="border:1px sold red;" allowfullscreen="" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="foot_bottom">
+        <div class="container">
+            <div class="cpy-right text-center py-5">
+                <p>© 2020 Geothermal Energy . All rights reserved | Design by Akshay Kumar </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
